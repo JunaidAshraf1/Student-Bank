@@ -11,15 +11,13 @@ Database name is "bank_db"
 
 You just need below to steps to use this we application.
 
-Step 1 - Download the zip file to your server public folder (htdocs for XAMPP  or www for WAMPP)
+Step 1 - Download or clone the file to your server's public folder (htdocs for XAMPP  or www for WAMPP)
 
-Step 2 - Create a new database in your PhpMyAdmin
+Step 2 - Create a new database in your PhpMyAdmin (Database name should be "bank_db")
 
-Step 2 - Import the database to your PhpMyAdmin (Database path home folder /database/bank_db.sql)
+Step 3 - Import the database to your PhpMyAdmin in the newly created database (Database(SQL) path homefolder/database/bank_db.sql)
 
-Hurray!! the banking web application is setup and is ready to be used.
-
-=================================================================
+Step 4 - Use the following credentials or register for new account opening and then internet banking.
 
 Login Credentials (Demo)
 
@@ -30,3 +28,36 @@ Password : junaid@123
 Staff Login
 ID : 210001
 Password : junaid@123
+
+Hurray!! the banking web application is setup and is ready to be used.
+
+=================================================================
+
+If any error, please let me know
+
+My Contact :
++91 7278523122 (Call + WhatsApp)
+mail@junaidashraf.com
+junaid@jscreeper.com
+My Website : https://www.junaidashraf.com (Personal)
+			 https://www.jscreeper.com (Professional)
+
+=================================================================
+
+For more projects like this or real big projects please connect to me or my team to get a best budget.
+
+Here is my Web and App development business website link and email. We also provide Web Hosting. Please get in touch.
+
+https://www.jscreeper.com
+support@jscreeper.com
++91 7278523122 (Call + WhatsApp)
+
+=================================================================
+
+I am also avaiable at Freelancer, hire me at
+
+https://www.freelancer.in/u/JunaidAshraf10
+
+=================================================================
+
+Have a great day.
