@@ -11,7 +11,7 @@ Database name is "bank_db"
 
 You just need below to steps to use this we application.
 
-Step 1 - Download or clone the file to your server's public folder (htdocs for XAMPP  or www for WAMPP)
+Step 1 - Download or clone the file to your server's public folder (htdocs for XAMPP  or www for WAMP)
 
 Step 2 - Create a new database in your PhpMyAdmin (Database name should be "bank_db")
 
