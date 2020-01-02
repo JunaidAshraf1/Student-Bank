@@ -12,9 +12,9 @@ banking is easily interpreted and understood by even the novice customer's.
 Login Credentials (Demo)
 
 Customer Login
-ID : 10008
+ID : 10003
 Password : junaid@123
 
 Staff Login
-ID : 101001
+ID : 210001
 Password : junaid@123
