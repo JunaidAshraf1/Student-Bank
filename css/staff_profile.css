@@ -1,0 +1,38 @@
+
+.staff_options{
+    
+    
+    width: 50%;
+    background-color: rgb(185, 237, 234);
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5%;
+    //border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+.staff_options input{
+    
+    font-size: 16px;
+    width: 40%;
+    height: 12%;
+    padding: 3%;
+    margin: 3%;
+    transition-duration: 0.5s;
+    //border-radius: 10px;
+    background-color: rgb(44, 78, 134);
+    color: white;
+
+   
+
+      
+}
+
+.staff_options input:hover{
+    
+    cursor: pointer;
+   background-color: rgba(44, 78, 134, 0.8);
+}
+
