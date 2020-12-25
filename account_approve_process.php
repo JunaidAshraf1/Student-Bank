@@ -34,8 +34,8 @@
 			if($result->num_rows > 0){
 			$row = $result->fetch_assoc();
 			$Last_customer_ID = $row['Last_Customer'];
-			$customer_id = $Last_customer_ID + 1;
 			$ifsc = 10110;
+			$customer_id = $ifsc.$Last_customer_ID + 1;
 			$branch = "New Market Kolkata";
 			$acc_no = $ifsc.mt_rand(01,99).mt_rand(01,99).$customer_id;
 	
@@ -135,26 +135,26 @@
 			//OTP integration for sending new account greeting and account details to customer-------------
 			//---------------------------------------------------------------------------------------------
 
-			require('textlocal.class.php');
-			$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
-			$textlocal = new Textlocal(false,false,$apikey);
-			$numbers = array($mob_no);
-			$sender = 'TXTLCL';
-			$message = 'Welcome to Student Bank of India. Your account number is  '.$acc_no.' Consider using our 24x7 Internet banking services to get full advantage. Happy banking.' ;
+			// require('textlocal.class.php');
+			// $apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
+			// $textlocal = new Textlocal(false,false,$apikey);
+			// $numbers = array($mob_no);
+			// $sender = 'TXTLCL';
+			// $message = 'Welcome to Student Bank of India. Your account number is  '.$acc_no.' Consider using our 24x7 Internet banking services to get full advantage. Happy banking.' ;
 		
-			try {
-				$result = $textlocal->sendSms($numbers, $message, $sender);
-				print_r($result);
-			} catch (Exception $e) {
-				die('Error: ' . $e->getMessage());
-			}
+			// try {
+			// 	$result = $textlocal->sendSms($numbers, $message, $sender);
+			// 	print_r($result);
+			// } catch (Exception $e) {
+			// 	die('Error: ' . $e->getMessage());
+			// }
 
 
 			//------------------------------------------------------------------------------------------
 			//------------------------------------------------------------------------------------------ 
 			
 
-						echo '<script>alert("Account Created Successfully\n\nAccount no :'.$acc_no.' ")</script>';
+						echo '<script>alert("Account Created Successfully\n\nAccount no :'.$acc_no.'\n\nHint : Get Debit Card then register e-banking")</script>';
 				
 				}
 				else

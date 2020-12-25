@@ -1,4 +1,4 @@
-
+<?php  ob_start();  ?>
 <?php
 
 
@@ -24,10 +24,10 @@ $password = $_POST['password'];
         die("Please Check Database Connection".$connect_error);
     }
     
-		$sql="SELECT * FROM bank_staff where Staff_id='$staff_id' and Password='$password' ";
+		$sql="SELECT * FROM bank_staff where staff_id='$staff_id' and Password='$password' ";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
-		if($staff_id != $row['Staff_id'] && $password != $row['Password']){
+		if($staff_id != $row['staff_id'] && $password != $row['Password']){
 			
 		echo '<script>alert("Incorrect Id/Password.")</script>';
 			
@@ -37,8 +37,8 @@ $password = $_POST['password'];
 		else{
 			
 		$_SESSION['staff_login'] = true;
-		$_SESSION['staff_name'] = $row['Staff_name'];
-        $_SESSION['staff_id'] = $row['Staff_id'];
+		$_SESSION['staff_name'] = $row['staff_name'];
+        $_SESSION['staff_id'] = $row['staff_id'];
 		date_default_timezone_set('Asia/Kolkata'); 
 		$_SESSION['staff_last_login'] = date("d/m/y h:i:s A");
 		header('location:staff_profile.php');

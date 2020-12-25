@@ -10,7 +10,7 @@
 			$ref_no = $_SESSION['ref_no'];
 	
 	?>
-	<label class="OTP_msg">OTP with Ref no.<?php echo $ref_no." sent to <b>".$hidden_mob_no."</b> please verify to complete your transaction" ; ?></label>
+	<label class="OTP_msg">OTP with Ref no.<?php echo $ref_no." sent to <b>".$hidden_mob_no."</b> please verify to complete your transaction <br><br> *OTP :".$_SESSION['fund_trnsfer_otp']."" ; ?></label>
 
 		<div class="fund_transfer_otp_container">
 		<form method="post">
@@ -281,38 +281,38 @@ if(isset($_POST['verify-btn'])){
 	//SMS Integration for Fund Transfer notification to both the Sender and the Receiver-------------------------------
 			///------------To the sender------------
 
-				require_once('textlocal.class.php');
-				$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
-				$textlocal = new Textlocal(false,false,$apikey);
-				$numbers = array($sender_mob);
-				$sender = 'TXTLCL';
-				$hidden_ac_no  = "XXXXXXXX".substr($sender_ac_no, 8, 13);
-				$message = 'Your a/c no.'.$hidden_ac_no.' is debited with Rs.'.$trnsf_amount.' on '.$date_time.' Transaction ID is '.$transaction_id.'' ;
+				// require_once('textlocal.class.php');
+				// $apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
+				// $textlocal = new Textlocal(false,false,$apikey);
+				// $numbers = array($sender_mob);
+				// $sender = 'TXTLCL';
+				// $hidden_ac_no  = "XXXXXXXX".substr($sender_ac_no, 8, 13);
+				// $message = 'Your a/c no.'.$hidden_ac_no.' is debited with Rs.'.$trnsf_amount.' on '.$date_time.' Transaction ID is '.$transaction_id.'' ;
 			
-				try {
-					$result = $textlocal->sendSms($numbers, $message, $sender);
-					print_r($result);
-				} catch (Exception $e) {
-					die('Error: ' . $e->getMessage());
-				}
+				// try {
+				// 	$result = $textlocal->sendSms($numbers, $message, $sender);
+				// 	print_r($result);
+				// } catch (Exception $e) {
+				// 	die('Error: ' . $e->getMessage());
+				// }
 
 				//-------------------------------------------------------------------------------------
 				//-------------------To the receiver----------------------------------------------------
 				
-				require_once('textlocal.class.php');
-				$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
-				$textlocal = new Textlocal(false,false,$apikey);
-				$numbers = array($receiver_mob);
-				$sender = 'TXTLCL';
-				$hidden_ac_no  = "XXXXXXXX".substr($receiver_ac_no, 8, 13);
-				$message = 'Your a/c no.'.$hidden_ac_no.' is credited with Rs.'.$trnsf_amount.' on '.$date_time.' Transaction ID is '.$transaction_id.'' ;
+				// require_once('textlocal.class.php');
+				// $apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
+				// $textlocal = new Textlocal(false,false,$apikey);
+				// $numbers = array($receiver_mob);
+				// $sender = 'TXTLCL';
+				// $hidden_ac_no  = "XXXXXXXX".substr($receiver_ac_no, 8, 13);
+				// $message = 'Your a/c no.'.$hidden_ac_no.' is credited with Rs.'.$trnsf_amount.' on '.$date_time.' Transaction ID is '.$transaction_id.'' ;
 			
-				try {
-					$result = $textlocal->sendSms($numbers, $message, $sender);
-					print_r($result);
-				} catch (Exception $e) {
-					die('Error: ' . $e->getMessage());
-				}
+				// try {
+				// 	$result = $textlocal->sendSms($numbers, $message, $sender);
+				// 	print_r($result);
+				// } catch (Exception $e) {
+				// 	die('Error: ' . $e->getMessage());
+				// }
 
 				//-------------------------------------------------------------------------------------------	
 		//-------------------------------------------------------------------------------------------- */

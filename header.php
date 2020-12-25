@@ -6,6 +6,7 @@
 				<li><a href="index.php#aboutus">About us</a></li>
                 <li><a href="#">Sitemap</a></li>
                 <li><a href="index.php#contactus">Contact us</a></li>
+				<li><a href="staff_login.php">Staff Login</a></li>
 			
 			</ul>
 		</div>

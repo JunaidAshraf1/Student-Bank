@@ -78,30 +78,30 @@ if(isset($_POST['dbt_crd_submit'])){
             //Code to Issue Debit Card since all the provided details are correct
             
             $mob_no = $row['Mobile_no'];
-           if($row['Debit_Card_No'] == NULL){
+           if($row['Debit_Card_No'] === NULL){
 
-            $debit_card = '4213'.mt_rand(100000,999999).mt_rand(100000,999999);
+            $debit_card = "4213".mt_rand(1000,9999).mt_rand(1000,9999);
             $debit_card_pin = mt_rand(10,99).mt_rand(10,99);
-            $sql = "UPDATE bank_customers SET Debit_Card_No = $debit_card,Debit_Card_Pin = '$debit_card_pin' WHERE Account_no = '$acc_no' ";
+            $sql = "UPDATE bank_customers SET Debit_Card_No = '".$debit_card."', Debit_Card_Pin = '".$debit_card_pin."' WHERE Account_no = '$acc_no' ";
             if($conn->query($sql) == TRUE ){
 
 
                 //SMS Integration for Debit Card Details  -----------------------------------------------------
 						
-					require('textlocal.class.php');
-					$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
-					$textlocal = new Textlocal(false,false,$apikey);
-					$numbers = array($mob_no);
-					$sender = 'TXTLCL';
-					$message = 'Hello '.$row['Username'].' Your Debit Card No is : '.$debit_card.' with the auto generated pin : '.$debit_card_pin.' Please change this pin as soon as possible';
+					// require('textlocal.class.php');
+					// $apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
+					// $textlocal = new Textlocal(false,false,$apikey);
+					// $numbers = array($mob_no);
+					// $sender = 'TXTLCL';
+					// $message = 'Hello '.$row['Username'].' Your Debit Card No is : '.$debit_card.' with the auto generated pin : '.$debit_card_pin.' Please change this pin as soon as possible';
 
 					
-						try {
-							$result = $textlocal->sendSms($numbers, $message, $sender);
-							print_r($result);
-						} catch (Exception $e) {
-							die('Error: ' . $e->getMessage());
-						}
+					// 	try {
+					// 		$result = $textlocal->sendSms($numbers, $message, $sender);
+					// 		print_r($result);
+					// 	} catch (Exception $e) {
+					// 		die('Error: ' . $e->getMessage());
+					// 	}
 						
 		//--------------------------------------------------------------------------------------				
 		//--------------------------------------------------------------------------------------

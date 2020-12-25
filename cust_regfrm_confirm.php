@@ -126,26 +126,26 @@ if(isset($_POST['cnfrm-submit'])){
 
 	//SMS Integration for Application Successfull Submission  -----------------------------------------------------
 						
-	require('textlocal.class.php');
-	$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
-	$textlocal = new Textlocal(false,false,$apikey);
-	$numbers = array($mobile);
-	$sender = 'TXTLCL';
-	$message = 'Hello '.$name.' Your Application number for new account opening is '.$application_no.' Please visit nearest 
-branch to complete your account opening process. Thanks for choosing Student Bank of India. Happy Banking.';
+// 	require('textlocal.class.php');
+// 	$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
+// 	$textlocal = new Textlocal(false,false,$apikey);
+// 	$numbers = array($mobile);
+// 	$sender = 'TXTLCL';
+// 	$message = 'Hello '.$name.' Your Application number for new account opening is '.$application_no.' Please visit nearest 
+// branch to complete your account opening process. Thanks for choosing Student Bank of India. Happy Banking.';
 
 	
-		try {
-			$result = $textlocal->sendSms($numbers, $message, $sender);
-			print_r($result);
-		} catch (Exception $e) {
-			die('Error: ' . $e->getMessage());
-		}
+// 		try {
+// 			$result = $textlocal->sendSms($numbers, $message, $sender);
+// 			print_r($result);
+// 		} catch (Exception $e) {
+// 			die('Error: ' . $e->getMessage());
+// 		}
 		
-		unset($_SESSION['$cust_acopening']);
+// 		unset($_SESSION['$cust_acopening']);
 //--------------------------------------------------------------------------------------		
 	
-	echo  '<script>alert("Application submitted successfully\n\nApplication number : '.$application_no.'\n\nPlease visit bank with application number for account approval")
+	echo  '<script>alert("Application submitted successfully\n\nApplication number : '.$application_no.'\n\nPlease visit bank with application number for account approval\n\nHint: From staff login, approve application")
 			location="index.php"
 			</script>';
 					

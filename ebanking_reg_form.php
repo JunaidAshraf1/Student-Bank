@@ -143,20 +143,20 @@ if(isset($_POST['submit'])){
 		    if($result=$conn->query($sql)== TRUE){
 
 
-                require_once('textlocal.class.php');
-				$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
-				$textlocal = new Textlocal(false,false,$apikey);
-				$numbers = array($mobileno);
-				$sender = 'TXTLCL';
-				$hidden_ac_no  = "XXXXXXXX".substr($receiver_ac_no, 8, 13);
-				$message = 'Your customer ID for Student Bank of India Internet Banking is '.$custmr_id.'' ;
+                // require_once('textlocal.class.php');
+				// $apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
+				// $textlocal = new Textlocal(false,false,$apikey);
+				// $numbers = array($mobileno);
+				// $sender = 'TXTLCL';
+				// $hidden_ac_no  = "XXXXXXXX".substr($receiver_ac_no, 8, 13);
+				// $message = 'Your customer ID for Student Bank of India Internet Banking is '.$custmr_id.'' ;
 			
-				try {
-					$result = $textlocal->sendSms($numbers, $message, $sender);
-					print_r($result);
-				} catch (Exception $e) {
-					die('Error: ' . $e->getMessage());
-				}
+				// try {
+				// 	$result = $textlocal->sendSms($numbers, $message, $sender);
+				// 	print_r($result);
+				// } catch (Exception $e) {
+				// 	die('Error: ' . $e->getMessage());
+				// }
 
 				//-------------------------------------------------------------------------------------------	
 			
