@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2020 at 08:20 PM
+-- Generation Time: Dec 25, 2020 at 08:25 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -90,9 +90,9 @@ CREATE TABLE `bank_customers` (
 --
 
 INSERT INTO `bank_customers` (`Id`, `Username`, `Password`, `Customer_Photo`, `Photo_name`, `Customer_ID`, `Gender`, `Landline_no`, `Home_Addr`, `Office_Addr`, `Country`, `State`, `City`, `Pin_code`, `Account_no`, `Branch`, `IFSC_Code`, `PAN`, `AADHAR`, `Current_Balance`, `LastTransaction`, `Mobile_no`, `Email_ID`, `Debit_Card_No`, `Debit_Card_Pin`, `CVV`, `DOB`, `Area_Loc`, `Nominee_name`, `Nominee_ac_no`, `Last_Login`, `Ac_Opening_Date`, `Account_Status`, `Account_type`) VALUES
-(1, 'Junaid', 'junaid', NULL, NULL, '1', 'Male', '', 'xxx', 'xxx', 'India', 'West Bengal', 'Kolkata', '700087', '1011036481', 'New Market Kolkata ', '10110', 'CCC', 'CCC', NULL, 0, '7278523122', 'newseries10@gmail.com', '421360288060', 8498, NULL, '2020-05-06', 'New Market', '', '', NULL, '26/12/20 12:14:47 AM', 'ACTIVE', 'Saving'),
-(2, 'kkhk', NULL, NULL, NULL, '2', 'Male', '64654', '4646', '4654', 'India', 'Delhi', 'Kolkata', '654654', '101101392', 'New Market Kolkata ', '10110', '65656', '56566', NULL, 0, '6546546', '64654654654', NULL, NULL, NULL, '2020-05-06', 'jhjhkhk', 'sjhg', '', NULL, '26/12/20 12:17:56 AM', 'ACTIVE', 'Saving'),
-(3, 'lkjlkjlkj', 'junaid', NULL, NULL, '101103', 'Male', '654654', 'kjlj', 'ljlkjl', 'India', 'Delhi', 'Kolkata', '546546', '101102482101103', 'New Market Kolkata ', '10110', 'CCC', 'CCC', NULL, 0, '7278523122', '6546546', '421331405110', 4223, NULL, '2020-12-26', 'sss', '', '', '26/12/20 12:50:19 AM', '26/12/20 12:45:12 AM', 'ACTIVE', 'Saving');
+(1, 'User 2', 'junaid', NULL, NULL, '1', 'Male', '', 'xxx', 'xxx', 'India', 'West Bengal', 'Kolkata', '700087', '1011036481', 'New Market Kolkata ', '10110', 'CCC', 'CCC', NULL, 0, '7278523122', 'newseries10@gmail.com', '421360288060', 8498, NULL, '2020-05-06', 'New Market', '', '', NULL, '26/12/20 12:14:47 AM', 'ACTIVE', 'Saving'),
+(2, 'User 3', NULL, NULL, NULL, '2', 'Male', '64654', '4646', '4654', 'India', 'Delhi', 'Kolkata', '654654', '101101392', 'New Market Kolkata ', '10110', '65656', '56566', NULL, 0, '6546546', '64654654654', NULL, NULL, NULL, '2020-05-06', 'jhjhkhk', 'sjhg', '', NULL, '26/12/20 12:17:56 AM', 'ACTIVE', 'Saving'),
+(3, 'Junaid', 'junaid@123', NULL, NULL, '101103', 'Male', '654654', '21, Market Street, Kolkata - 700087', '21, Market Street, Kolkata - 700087', 'India', 'Delhi', 'Kolkata', '546546', '101102482101103', 'New Market Kolkata ', '10110', 'CCC', 'CCC', NULL, 0, '7278523122', '6546546', '421331405110', 4223, NULL, '2020-12-26', 'sss', '', '', '26/12/20 12:50:19 AM', '26/12/20 12:45:12 AM', 'ACTIVE', 'Saving');
 
 -- --------------------------------------------------------
 
