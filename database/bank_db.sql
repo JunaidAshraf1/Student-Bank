@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2020 at 08:25 PM
+-- Generation Time: Dec 26, 2020 at 10:34 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -90,9 +90,8 @@ CREATE TABLE `bank_customers` (
 --
 
 INSERT INTO `bank_customers` (`Id`, `Username`, `Password`, `Customer_Photo`, `Photo_name`, `Customer_ID`, `Gender`, `Landline_no`, `Home_Addr`, `Office_Addr`, `Country`, `State`, `City`, `Pin_code`, `Account_no`, `Branch`, `IFSC_Code`, `PAN`, `AADHAR`, `Current_Balance`, `LastTransaction`, `Mobile_no`, `Email_ID`, `Debit_Card_No`, `Debit_Card_Pin`, `CVV`, `DOB`, `Area_Loc`, `Nominee_name`, `Nominee_ac_no`, `Last_Login`, `Ac_Opening_Date`, `Account_Status`, `Account_type`) VALUES
-(1, 'User 2', 'junaid', NULL, NULL, '1', 'Male', '', 'xxx', 'xxx', 'India', 'West Bengal', 'Kolkata', '700087', '1011036481', 'New Market Kolkata ', '10110', 'CCC', 'CCC', NULL, 0, '7278523122', 'newseries10@gmail.com', '421360288060', 8498, NULL, '2020-05-06', 'New Market', '', '', NULL, '26/12/20 12:14:47 AM', 'ACTIVE', 'Saving'),
-(2, 'User 3', NULL, NULL, NULL, '2', 'Male', '64654', '4646', '4654', 'India', 'Delhi', 'Kolkata', '654654', '101101392', 'New Market Kolkata ', '10110', '65656', '56566', NULL, 0, '6546546', '64654654654', NULL, NULL, NULL, '2020-05-06', 'jhjhkhk', 'sjhg', '', NULL, '26/12/20 12:17:56 AM', 'ACTIVE', 'Saving'),
-(3, 'Junaid', 'junaid@123', NULL, NULL, '101103', 'Male', '654654', '21, Market Street, Kolkata - 700087', '21, Market Street, Kolkata - 700087', 'India', 'Delhi', 'Kolkata', '546546', '101102482101103', 'New Market Kolkata ', '10110', 'CCC', 'CCC', NULL, 0, '7278523122', '6546546', '421331405110', 4223, NULL, '2020-12-26', 'sss', '', '', '26/12/20 12:50:19 AM', '26/12/20 12:45:12 AM', 'ACTIVE', 'Saving');
+(1, 'Junaid', 'junaid@123', NULL, NULL, '10111', 'Male', '', 'XXX', 'XXX', 'India', 'West Bengal', 'Kolkata', '700087', '10110528510111', 'New Market Kolkata ', '10110', 'XXX', 'XXX', 10000.00, 0, '7278523122', 'mail@junaidashraf.com', '421362466207', 7214, NULL, '1995-12-10', 'New Market', '', '', '26/12/20 02:54:19 PM', '26/12/20 02:50:47 PM', 'ACTIVE', 'Saving'),
+(2, 'Ashraf', 'ashraf@123', NULL, NULL, '1011010112', 'Male', '', 'XXX', 'XXX', 'India', 'West Bengal', 'Kolkata', '700087', '101104441011010112', 'New Market Kolkata ', '10110', 'XXX', 'XXX', 45000.00, 0, '9831915575', 'ashraf@gmail.com', '421364603938', 2534, NULL, '1995-12-10', 'XXX', '', '', '26/12/20 03:02:10 PM', '26/12/20 02:55:43 PM', 'ACTIVE', 'Saving');
 
 -- --------------------------------------------------------
 
@@ -121,15 +120,15 @@ CREATE TABLE `bank_staff` (
 --
 
 INSERT INTO `bank_staff` (`Id`, `staff_name`, `staff_id`, `Password`, `Mobile_no`, `Email_id`, `Gender`, `Department`, `DOB`, `AADHAR`, `PAN`, `Home_addr`, `Last_login`) VALUES
-(1, 'Junaid Ashraf', '210001', 'junaid@123', '7278523122', 'Nill', 'Male', 'Revenue', '10121995', '3639256458', 'COWPA5468', '21, Market Street, 3rd Floor, Kolkata - 700087', '25/12/20 11:32:21 PM');
+(1, 'Junaid Ashraf', '210001', 'junaid@123', '7278523122', 'Nill', 'Male', 'Revenue', '10121995', '3639256458', 'COWPA5468', '21, Market Street, 3rd Floor, Kolkata - 700087', '26/12/20 03:00:59 PM');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `beneficiary_101103`
+-- Table structure for table `beneficiary_10111`
 --
 
-CREATE TABLE `beneficiary_101103` (
+CREATE TABLE `beneficiary_10111` (
   `id` int(255) NOT NULL,
   `Beneficiary_name` varchar(255) DEFAULT NULL,
   `Beneficiary_ac_no` varchar(255) DEFAULT NULL,
@@ -138,6 +137,29 @@ CREATE TABLE `beneficiary_101103` (
   `Status` varchar(255) DEFAULT NULL,
   `Date_added` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `beneficiary_1011010112`
+--
+
+CREATE TABLE `beneficiary_1011010112` (
+  `id` int(255) NOT NULL,
+  `Beneficiary_name` varchar(255) DEFAULT NULL,
+  `Beneficiary_ac_no` varchar(255) DEFAULT NULL,
+  `IFSC_code` varchar(255) DEFAULT NULL,
+  `Account_type` varchar(255) DEFAULT NULL,
+  `Status` varchar(255) DEFAULT NULL,
+  `Date_added` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `beneficiary_1011010112`
+--
+
+INSERT INTO `beneficiary_1011010112` (`id`, `Beneficiary_name`, `Beneficiary_ac_no`, `IFSC_code`, `Account_type`, `Status`, `Date_added`) VALUES
+(1, 'Junaid', '10110528510111', '10110', 'Saving', 'ACTIVE', '26/12/20 03:00:07 PM');
 
 -- --------------------------------------------------------
 
@@ -162,10 +184,10 @@ INSERT INTO `cheque_book` (`id`, `cust_name`, `account_no`, `cheque_book_status`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `passbook_101103`
+-- Table structure for table `passbook_10111`
 --
 
-CREATE TABLE `passbook_101103` (
+CREATE TABLE `passbook_10111` (
   `id` int(255) NOT NULL,
   `Transaction_id` varchar(255) DEFAULT NULL,
   `Transaction_date` varchar(255) DEFAULT NULL,
@@ -177,11 +199,38 @@ CREATE TABLE `passbook_101103` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `passbook_101103`
+-- Dumping data for table `passbook_10111`
 --
 
-INSERT INTO `passbook_101103` (`id`, `Transaction_id`, `Transaction_date`, `Description`, `Cr_amount`, `Dr_amount`, `Net_Balance`, `Remark`) VALUES
-(1, '194236244543', '26/12/20 12:45:12 AM', 'Account Opening', '0', '0', '0', NULL);
+INSERT INTO `passbook_10111` (`id`, `Transaction_id`, `Transaction_date`, `Description`, `Cr_amount`, `Dr_amount`, `Net_Balance`, `Remark`) VALUES
+(1, '842697598725', '26/12/20 02:50:47 PM', 'Account Opening', '0', '0', '0', NULL),
+(2, '861930485468', '26/12/20 03:03:19 PM', 'Ashraf/101104441011010112/10110', '10000', '0', '10000', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `passbook_1011010112`
+--
+
+CREATE TABLE `passbook_1011010112` (
+  `id` int(255) NOT NULL,
+  `Transaction_id` varchar(255) DEFAULT NULL,
+  `Transaction_date` varchar(255) DEFAULT NULL,
+  `Description` varchar(255) DEFAULT NULL,
+  `Cr_amount` varchar(255) DEFAULT NULL,
+  `Dr_amount` varchar(255) DEFAULT NULL,
+  `Net_Balance` varchar(255) DEFAULT NULL,
+  `Remark` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `passbook_1011010112`
+--
+
+INSERT INTO `passbook_1011010112` (`id`, `Transaction_id`, `Transaction_date`, `Description`, `Cr_amount`, `Dr_amount`, `Net_Balance`, `Remark`) VALUES
+(1, '589306552829', '26/12/20 02:55:43 PM', 'Account Opening', '0', '0', '0', NULL),
+(2, '583402470572', '26/12/20 03:01:35 PM', 'Cash Deposit/583402470572', '55000', '0', '55000', 'Cash Deposit'),
+(3, '861930485468', '26/12/20 03:03:19 PM', 'Junaid/10110528510111/10110', '0', '10000', '45000', '');
 
 -- --------------------------------------------------------
 
@@ -266,9 +315,15 @@ ALTER TABLE `bank_staff`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Indexes for table `beneficiary_101103`
+-- Indexes for table `beneficiary_10111`
 --
-ALTER TABLE `beneficiary_101103`
+ALTER TABLE `beneficiary_10111`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `beneficiary_1011010112`
+--
+ALTER TABLE `beneficiary_1011010112`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -278,9 +333,15 @@ ALTER TABLE `cheque_book`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `passbook_101103`
+-- Indexes for table `passbook_10111`
 --
-ALTER TABLE `passbook_101103`
+ALTER TABLE `passbook_10111`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `passbook_1011010112`
+--
+ALTER TABLE `passbook_1011010112`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -310,7 +371,7 @@ ALTER TABLE `atm`
 -- AUTO_INCREMENT for table `bank_customers`
 --
 ALTER TABLE `bank_customers`
-  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `bank_staff`
@@ -319,10 +380,16 @@ ALTER TABLE `bank_staff`
   MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `beneficiary_101103`
+-- AUTO_INCREMENT for table `beneficiary_10111`
 --
-ALTER TABLE `beneficiary_101103`
+ALTER TABLE `beneficiary_10111`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `beneficiary_1011010112`
+--
+ALTER TABLE `beneficiary_1011010112`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cheque_book`
@@ -331,10 +398,16 @@ ALTER TABLE `cheque_book`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `passbook_101103`
+-- AUTO_INCREMENT for table `passbook_10111`
 --
-ALTER TABLE `passbook_101103`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `passbook_10111`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `passbook_1011010112`
+--
+ALTER TABLE `passbook_1011010112`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `staff`

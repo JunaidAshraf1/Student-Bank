@@ -1,8 +1,5 @@
 <?php  ob_start();  ?>
 <?php
-
-
-
 if(isset($_POST['staff_login-btn'])){
 	
 if(isset($_POST['staff_id'])){

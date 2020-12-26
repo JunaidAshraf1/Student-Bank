@@ -308,7 +308,7 @@ if(isset($_POST['fnd_trns_btn'])){
 			// $textlocal = new Textlocal(false,false,$apikey);
 			// $numbers = array($sender_mob);
 			// $sender = 'TXTLCL';
-			// $_SESSION['ref_no'] = $ref_no = mt_rand(1000,9999);
+			$_SESSION['ref_no'] = $ref_no = mt_rand(1000,9999);
 			// $message = 'Hello '.$sender_name.' OTP with Ref no.'.$ref_no.' to complete your transaction is '.$otp_fund_trnsfer.'';
 		
 			// try {

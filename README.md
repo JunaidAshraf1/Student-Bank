@@ -22,7 +22,7 @@ Step 4 - Use the following credentials or register for new account opening and t
 Login Credentials (Demo)
 
 Customer Login
-ID : 101103
+ID : 10111
 Password : junaid@123
 
 Staff Login

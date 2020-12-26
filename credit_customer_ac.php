@@ -68,20 +68,20 @@ if(isset($_POST['credit_btn'])){
 		//SMS Integration for Fund Transfer notification to both the Sender and the customer--------------
 			///------------To the sender------------
 
-				require('textlocal.class.php');
-				$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
-				$textlocal = new Textlocal(false,false,$apikey);
-				$numbers = array($customer_mob);
-				$sender = 'TXTLCL';
-				$hidden_ac_no  = "XXXXXXXX".substr($customer_ac_no ,8 , 13);
-				$message = 'Your a/c no.'.$hidden_ac_no.' is credited with Rs.'.$credit_amount.' on '.$date_time.' Transaction ID is '.$transaction_id.'' ;
+				// require('textlocal.class.php');
+				// $apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
+				// $textlocal = new Textlocal(false,false,$apikey);
+				// $numbers = array($customer_mob);
+				// $sender = 'TXTLCL';
+				// $hidden_ac_no  = "XXXXXXXX".substr($customer_ac_no ,8 , 13);
+				// $message = 'Your a/c no.'.$hidden_ac_no.' is credited with Rs.'.$credit_amount.' on '.$date_time.' Transaction ID is '.$transaction_id.'' ;
 			
-				try {
-					$result = $textlocal->sendSms($numbers, $message, $sender);
-					print_r($result);
-				} catch (Exception $e) {
-					die('Error: ' . $e->getMessage());
-				}
+				// try {
+				// 	$result = $textlocal->sendSms($numbers, $message, $sender);
+				// 	print_r($result);
+				// } catch (Exception $e) {
+				// 	die('Error: ' . $e->getMessage());
+				// }
 
 				//-------------------------------------------------------------------------------------
 				//-------------------To the customer---------------------------------------------------- 
