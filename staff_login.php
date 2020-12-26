@@ -47,5 +47,5 @@ if(isset($_SESSION['staff_login'])){
     </body>
 </html> 
 
-<?php include 'staff_login_process.php '?>
+<?php include 'staff_login_process.php'?>
 

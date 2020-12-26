@@ -49,5 +49,5 @@ if(isset($_SESSION['customer_login'])){
     </body>
 </html> 
 
-<?php include 'customer_login_process.php '?>
+<?php include 'customer_login_process.php'?>
 

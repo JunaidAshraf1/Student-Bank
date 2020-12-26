@@ -1,25 +1,12 @@
 <?php  ob_start();  ?>
 <?php
+include 'db_connect.php';
 if(isset($_POST['staff_login-btn'])){
 	
 if(isset($_POST['staff_id'])){
 $staff_id = $_POST['staff_id'];
 $password = $_POST['password'];
 }
-    
-    $host="localhost";
-    $user="root";
-    $pass="";
-    $db="bank_db";
-    
-    //Database Connection
-    $conn = new mysqli($host, $user, $pass, $db);
-    
-    //Check Connection
-    if($conn->connect_error){
-        
-        die("Please Check Database Connection".$connect_error);
-    }
     
 		$sql="SELECT * FROM bank_staff where staff_id='$staff_id' and Password='$password' ";
 		$result = $conn->query($sql);

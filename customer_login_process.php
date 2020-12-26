@@ -1,6 +1,6 @@
 <?php  ob_start();  ?>
 <?php
-
+include 'db_connect.php';
 if(isset($_POST['login-btn'])){
 	
 if(isset($_POST['customer_id'])){
@@ -11,20 +11,6 @@ if(isset($_POST['customer_id'])){
 $password = $_POST['password'];
 $customer_id = $_POST['customer_id'];
 }
-    
-    $host="localhost";
-    $user="root";
-    $pass="";
-    $db="bank_db";
-    
-    //Database Connection
-    $conn = new mysqli($host, $user, $pass, $db);
-    
-    //Check Connection
-    if($conn->connect_error){
-        
-        die("Please Check Database Connection".$connect_error);
-    }
     
 		$sql="SELECT * FROM bank_customers where Customer_ID='$customer_id' and Password='$password' ";
 		$result = $conn->query($sql);
