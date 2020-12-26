@@ -20,7 +20,7 @@ if($_SESSION['customer_login'] != true)
 	
 ?> 
 
-<form action="Upload.php" method="post" enctype="multipart/form-data">
+<form action="upload.php" method="post" enctype="multipart/form-data">
 <div class="file_upload">
 <input type="file" name="image" required><br><br>
 <input type="submit" name="submit" value="Upload">
